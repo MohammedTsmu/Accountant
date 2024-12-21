@@ -22,7 +22,7 @@ namespace Accountant
                 // Validate inputs
                 if (string.IsNullOrWhiteSpace(textEditCustomerName.Text) || spinEditAmount.Value <= 0)
                 {
-                    MessageBox.Show("Please enter valid details.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("الرجاء إدخال تفاصيل صالحة.", "خطأ التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -40,18 +40,23 @@ namespace Accountant
                     db.SaveChanges();
                 }
 
-                MessageBox.Show("Transaction added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("تمت إضافة المعاملة بنجاح.", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close(); // Close the form after saving
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"حدث خطأ: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close(); // Close the form without saving
+        }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -61,7 +61,7 @@ namespace Accountant
 
             if (selectedTransaction == null)
             {
-                MessageBox.Show("Please select a transaction to edit.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("الرجاء تحديد المعاملة لتحريرها.", "لا يوجد اختيار", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -80,12 +80,12 @@ namespace Accountant
 
             if (selectedTransaction == null)
             {
-                MessageBox.Show("Please select a transaction to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("الرجاء تحديد المعاملة التي تريد حذفها.", "لا يوجد اختيار", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            var result = MessageBox.Show("Are you sure you want to delete this transaction?",
-                                         "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var result = MessageBox.Show("هل أنت متأكد أنك تريد حذف هذه المعاملة؟",
+                                         "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
@@ -102,12 +102,12 @@ namespace Accountant
                         }
                     }
 
-                    MessageBox.Show("Transaction deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("تم حذف المعاملة بنجاح.", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadTransactions();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"حدث خطأ: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -263,7 +263,7 @@ namespace Accountant
 
                 if (filteredTransactions == null || !filteredTransactions.Any())
                 {
-                    MessageBox.Show("No data to generate the report.", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("لا توجد بيانات لإنشاء التقرير.", "تقرير خطأ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -292,7 +292,7 @@ namespace Accountant
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while generating the report: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"حدث خطأ أثناء إنشاء التقرير: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -315,11 +315,11 @@ namespace Accountant
                     connection.Close();
                 }
 
-                MessageBox.Show("Database backed up successfully.", "Backup", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("تم نسخ قاعدة البيانات احتياطيًا بنجاح.", "النسخ الاحتياطي", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Backup failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"فشل النسخ الاحتياطي: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -337,11 +337,11 @@ namespace Accountant
                     connection.Close();
                 }
 
-                MessageBox.Show("Database restored successfully.", "Restore", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("تم استعادة قاعدة البيانات بنجاح.", "استعادة", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Restore failed: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"فشل الاستعادة: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

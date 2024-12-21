@@ -37,7 +37,7 @@ namespace Accountant.Forms
             {
                 if (string.IsNullOrWhiteSpace(textEditCustomerName.Text) || spinEditAmount.Value <= 0)
                 {
-                    MessageBox.Show("Please enter valid details.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("الرجاء إدخال تفاصيل صالحة.", "أخطاء التحقق", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -55,14 +55,18 @@ namespace Accountant.Forms
                     }
                 }
 
-                MessageBox.Show("Transaction updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("تم تحديث المعاملة بنجاح.", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"حدث خطأ: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

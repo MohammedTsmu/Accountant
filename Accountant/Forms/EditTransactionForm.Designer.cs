@@ -101,6 +101,7 @@
             this.btnCancel.Size = new System.Drawing.Size(125, 56);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "الغاء";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // spinEditAmount
             // 
