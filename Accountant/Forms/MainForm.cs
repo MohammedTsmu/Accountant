@@ -352,6 +352,5 @@ namespace Accountant
                 BackupDatabase("C:\\Backup\\AccountantDB.bak");
             }
         }
-
     }
 }

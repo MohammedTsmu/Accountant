@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.dateEditTo = new DevExpress.XtraEditors.DateEdit();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colDateAndTime = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,14 +43,14 @@
             this.lblTotalAmount = new DevExpress.XtraEditors.LabelControl();
             this.btnPrintReport = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.textEditCustomerName = new DevExpress.XtraEditors.TextEdit();
-            this.spinEdit1 = new DevExpress.XtraEditors.SpinEdit();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.dateEditFrom = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -60,15 +58,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCustomerName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditFrom.Properties.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // dateEditTo
             // 
+            this.dateEditTo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateEditTo.EditValue = null;
-            this.dateEditTo.Location = new System.Drawing.Point(697, 12);
+            this.dateEditTo.Location = new System.Drawing.Point(140, 16);
             this.dateEditTo.Name = "dateEditTo";
             this.dateEditTo.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateEditTo.Properties.Appearance.Options.UseFont = true;
@@ -76,34 +74,19 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditTo.Size = new System.Drawing.Size(156, 32);
+            this.dateEditTo.Size = new System.Drawing.Size(266, 32);
             this.dateEditTo.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(386, 33);
-            this.textBox1.TabIndex = 1;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(12, 89);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(376, 33);
-            this.numericUpDown1.TabIndex = 2;
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = typeof(Accountant.Models.Transaction);
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridControl1.Location = new System.Drawing.Point(0, 162);
+            this.gridControl1.Location = new System.Drawing.Point(0, 132);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl1.Size = new System.Drawing.Size(1062, 413);
+            this.gridControl1.Size = new System.Drawing.Size(1062, 447);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -303,7 +286,7 @@
             this.btnFilter.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilter.Appearance.Options.UseFont = true;
             this.btnFilter.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFilter.ImageOptions.SvgImage")));
-            this.btnFilter.Location = new System.Drawing.Point(862, 50);
+            this.btnFilter.Location = new System.Drawing.Point(253, 59);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(153, 61);
             this.btnFilter.TabIndex = 4;
@@ -316,7 +299,7 @@
             this.btnDeleteTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTransaction.Appearance.Options.UseFont = true;
             this.btnDeleteTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteTransaction.ImageOptions.SvgImage")));
-            this.btnDeleteTransaction.Location = new System.Drawing.Point(556, 16);
+            this.btnDeleteTransaction.Location = new System.Drawing.Point(560, 17);
             this.btnDeleteTransaction.Name = "btnDeleteTransaction";
             this.btnDeleteTransaction.Size = new System.Drawing.Size(153, 61);
             this.btnDeleteTransaction.TabIndex = 3;
@@ -329,7 +312,7 @@
             this.btnEditTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditTransaction.Appearance.Options.UseFont = true;
             this.btnEditTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditTransaction.ImageOptions.SvgImage")));
-            this.btnEditTransaction.Location = new System.Drawing.Point(722, 16);
+            this.btnEditTransaction.Location = new System.Drawing.Point(723, 17);
             this.btnEditTransaction.Name = "btnEditTransaction";
             this.btnEditTransaction.Size = new System.Drawing.Size(153, 61);
             this.btnEditTransaction.TabIndex = 2;
@@ -342,7 +325,7 @@
             this.btnAddTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTransaction.Appearance.Options.UseFont = true;
             this.btnAddTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddTransaction.ImageOptions.SvgImage")));
-            this.btnAddTransaction.Location = new System.Drawing.Point(888, 16);
+            this.btnAddTransaction.Location = new System.Drawing.Point(886, 17);
             this.btnAddTransaction.Name = "btnAddTransaction";
             this.btnAddTransaction.Size = new System.Drawing.Size(153, 61);
             this.btnAddTransaction.TabIndex = 1;
@@ -357,20 +340,25 @@
             this.panelControl1.Controls.Add(this.btnAddTransaction);
             this.panelControl1.Controls.Add(this.btnPrintReport);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 581);
+            this.panelControl1.Location = new System.Drawing.Point(0, 579);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1062, 92);
+            this.panelControl1.Size = new System.Drawing.Size(1062, 94);
             this.panelControl1.TabIndex = 6;
             // 
             // lblTotalAmount
             // 
             this.lblTotalAmount.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.lblTotalAmount.Appearance.Options.UseFont = true;
-            this.lblTotalAmount.Location = new System.Drawing.Point(78, 35);
+            this.lblTotalAmount.Appearance.Options.UseTextOptions = true;
+            this.lblTotalAmount.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblTotalAmount.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblTotalAmount.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblTotalAmount.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTotalAmount.Location = new System.Drawing.Point(2, 2);
             this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(178, 26);
+            this.lblTotalAmount.Size = new System.Drawing.Size(389, 90);
             this.lblTotalAmount.TabIndex = 5;
-            this.lblTotalAmount.Text = "Total Amount: 0.00";
+            this.lblTotalAmount.Text = "اجمالي المبلغ الوارد: 0.00";
             // 
             // btnPrintReport
             // 
@@ -378,7 +366,7 @@
             this.btnPrintReport.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintReport.Appearance.Options.UseFont = true;
             this.btnPrintReport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintReport.ImageOptions.SvgImage")));
-            this.btnPrintReport.Location = new System.Drawing.Point(397, 16);
+            this.btnPrintReport.Location = new System.Drawing.Point(397, 17);
             this.btnPrintReport.Name = "btnPrintReport";
             this.btnPrintReport.Size = new System.Drawing.Size(153, 61);
             this.btnPrintReport.TabIndex = 4;
@@ -387,26 +375,48 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.labelControl3);
+            this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Controls.Add(this.textEditCustomerName);
-            this.panelControl2.Controls.Add(this.spinEdit1);
             this.panelControl2.Controls.Add(this.simpleButton8);
             this.panelControl2.Controls.Add(this.dateEditFrom);
             this.panelControl2.Controls.Add(this.dateEditTo);
             this.panelControl2.Controls.Add(this.btnFilter);
-            this.panelControl2.Controls.Add(this.textBox1);
-            this.panelControl2.Controls.Add(this.numericUpDown1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1062, 132);
             this.panelControl2.TabIndex = 7;
             // 
+            // labelControl3
+            // 
+            this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(799, 16);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(140, 26);
+            this.labelControl3.TabIndex = 10;
+            this.labelControl3.Text = "التاريــــخ:       من";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(412, 22);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(29, 26);
+            this.labelControl2.TabIndex = 9;
+            this.labelControl2.Text = "الى";
+            // 
             // labelControl1
             // 
+            this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(631, 50);
+            this.labelControl1.Location = new System.Drawing.Point(714, 70);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(225, 26);
             this.labelControl1.TabIndex = 8;
@@ -414,24 +424,13 @@
             // 
             // textEditCustomerName
             // 
-            this.textEditCustomerName.Location = new System.Drawing.Point(731, 82);
+            this.textEditCustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textEditCustomerName.Location = new System.Drawing.Point(487, 67);
             this.textEditCustomerName.Name = "textEditCustomerName";
-            this.textEditCustomerName.Size = new System.Drawing.Size(125, 22);
+            this.textEditCustomerName.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
+            this.textEditCustomerName.Properties.Appearance.Options.UseFont = true;
+            this.textEditCustomerName.Size = new System.Drawing.Size(222, 32);
             this.textEditCustomerName.TabIndex = 7;
-            // 
-            // spinEdit1
-            // 
-            this.spinEdit1.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.spinEdit1.Location = new System.Drawing.Point(12, 59);
-            this.spinEdit1.Name = "spinEdit1";
-            this.spinEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinEdit1.Size = new System.Drawing.Size(125, 24);
-            this.spinEdit1.TabIndex = 6;
             // 
             // simpleButton8
             // 
@@ -446,8 +445,9 @@
             // 
             // dateEditFrom
             // 
+            this.dateEditFrom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateEditFrom.EditValue = null;
-            this.dateEditFrom.Location = new System.Drawing.Point(859, 12);
+            this.dateEditFrom.Location = new System.Drawing.Point(487, 13);
             this.dateEditFrom.Name = "dateEditFrom";
             this.dateEditFrom.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateEditFrom.Properties.Appearance.Options.UseFont = true;
@@ -455,7 +455,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditFrom.Size = new System.Drawing.Size(156, 32);
+            this.dateEditFrom.Size = new System.Drawing.Size(306, 32);
             this.dateEditFrom.TabIndex = 0;
             // 
             // MainForm
@@ -463,9 +463,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 673);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.Controls.Add(this.gridControl1);
             this.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
@@ -474,17 +474,14 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCustomerName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditFrom.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditFrom.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -494,8 +491,6 @@
         #endregion
 
         private DevExpress.XtraEditors.DateEdit dateEditTo;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton btnFilter;
@@ -506,7 +501,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.SimpleButton simpleButton8;
         private DevExpress.XtraEditors.SimpleButton btnPrintReport;
-        private DevExpress.XtraEditors.SpinEdit spinEdit1;
         private DevExpress.XtraEditors.DateEdit dateEditFrom;
         private DevExpress.XtraEditors.LabelControl lblTotalAmount;
         private DevExpress.XtraGrid.Columns.GridColumn colDateAndTime;
@@ -514,6 +508,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colAmountReceived;
         private DevExpress.XtraEditors.TextEdit textEditCustomerName;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }
 
