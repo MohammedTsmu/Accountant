@@ -112,54 +112,33 @@ namespace Accountant
 
         }
 
-        //private void FilterTransactions()
-        //{
-        //    using (var db = new AccountantDBEntities())
-        //    {
-        //        // Get the date range
-        //        var fromDate = dateEditFrom.DateTime.Date;
-        //        var toDate = dateEditTo.DateTime.Date.AddDays(1).AddTicks(-1);
-
-        //        // Query filtered transactions
-        //        var filteredTransactions = db.Transactions
-        //            .Where(t => t.DateAndTime >= fromDate && t.DateAndTime <= toDate)
-        //            .ToList();
-
-        //        // Update GridControl
-        //        gridControl1.DataSource = filteredTransactions;
-
-        //        // Calculate total amount
-        //        var totalAmount = filteredTransactions.Sum(t => t.AmountReceived);
-        //        lblTotalAmount.Text = $"Total Amount: {totalAmount:C}";
-        //    }
-        //}
-
         private void FilterTransactions()
         {
             using (var db = new AccountantDBEntities())
             {
                 try
                 {
-                    // Get the date range
                     var fromDate = dateEditFrom.DateTime.Date;
                     var toDate = dateEditTo.DateTime.Date.AddDays(1).AddTicks(-1);
+                    var customerName = textEditCustomerName.Text.Trim();
 
-                    // Fetch transactions within the date range
-                    var filteredTransactions = db.Transactions
-                        .Where(t => t.DateAndTime >= fromDate && t.DateAndTime <= toDate)
-                        .ToList();
+                    var query = db.Transactions.Where(t => t.DateAndTime >= fromDate && t.DateAndTime <= toDate);
 
-                    // Check if any transactions match the criteria
-                    if (!filteredTransactions.Any())
+                    if (!string.IsNullOrEmpty(customerName))
                     {
-                        MessageBox.Show("No transactions found for the selected date range.", "Filter Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        query = query.Where(t => t.CustomerName.Contains(customerName));
                     }
 
-                    // Update the GridControl DataSource
-                    gridControl1.DataSource = null; // Clear existing binding
+                    var filteredTransactions = query.ToList();
+
+                    if (!filteredTransactions.Any())
+                    {
+                        MessageBox.Show("No transactions found for the selected criteria.", "Filter Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    gridControl1.DataSource = null;
                     gridControl1.DataSource = filteredTransactions;
 
-                    // Calculate and display the total amount
                     var totalAmount = filteredTransactions.Sum(t => t.AmountReceived);
                     lblTotalAmount.Text = $"Total Amount: {totalAmount:C}";
                 }
@@ -172,23 +151,97 @@ namespace Accountant
 
 
 
+
+        //private void btnPrintReport_Click(object sender, EventArgs e)
+        //{
+        //    // Get the filtered data from GridControl
+        //    var filteredTransactions = gridView1.DataSource as List<Transaction>;
+
+        //    if (filteredTransactions == null || !filteredTransactions.Any())
+        //    {
+        //        MessageBox.Show("No data to generate the report.", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        return;
+        //    }
+
+        //    // Create and show the report
+        //    var report = new Reports.TransactionReport();
+        //    report.DataSource = filteredTransactions;
+        //    var printTool = new DevExpress.XtraReports.UI.ReportPrintTool(report);
+        //    printTool.ShowPreview();
+        //}
+
+        //private void btnPrintReport_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        // Get the filtered data from GridControl
+        //        var filteredTransactions = gridControl1.DataSource as List<Transaction>;
+
+        //        if (filteredTransactions == null || !filteredTransactions.Any())
+        //        {
+        //            MessageBox.Show("No data to generate the report.", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //            return;
+        //        }
+
+        //        // Log filtered transactions for debugging
+        //        foreach (var transaction in filteredTransactions)
+        //        {
+        //            Console.WriteLine($"Customer: {transaction.CustomerName}, Amount: {transaction.AmountReceived}");
+        //        }
+
+        //        // Create and configure the report
+        //        var report = new Reports.TransactionReport();
+        //        report.DataSource = filteredTransactions;
+
+        //        // Preview the report
+        //        var printTool = new DevExpress.XtraReports.UI.ReportPrintTool(report);
+        //        printTool.ShowPreview();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"An error occurred while generating the report: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
         private void btnPrintReport_Click(object sender, EventArgs e)
         {
-            // Get the filtered data from GridControl
-            var filteredTransactions = gridView1.DataSource as List<Transaction>;
-
-            if (filteredTransactions == null || !filteredTransactions.Any())
+            try
             {
-                MessageBox.Show("No data to generate the report.", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                // Get the filtered data from GridControl
+                var filteredTransactions = gridControl1.DataSource as List<Transaction>;
 
-            // Create and show the report
-            var report = new Reports.TransactionReport();
-            report.DataSource = filteredTransactions;
-            var printTool = new DevExpress.XtraReports.UI.ReportPrintTool(report);
-            printTool.ShowPreview();
+                if (filteredTransactions == null || !filteredTransactions.Any())
+                {
+                    MessageBox.Show("No data to generate the report.", "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Create and configure the report
+                var report = new Reports.TransactionReport();
+                report.DataSource = filteredTransactions;
+                report.DataMember = ""; // Ensure no specific data member is restricting the data
+
+                // Pass parameters if needed
+                if (report.Parameters["ReportTotal"] != null)
+                {
+                    report.Parameters["ReportTotal"].Value = filteredTransactions.Sum(t => t.AmountReceived);
+                    report.Parameters["ReportTotal"].Visible = false; // Avoid asking for the parameter value
+                }
+
+                // Preview the report
+                var printTool = new DevExpress.XtraReports.UI.ReportPrintTool(report);
+                printTool.ShowPreview();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while generating the report: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+
+
+
+
 
         private void BackupDatabase(string backupPath)
         {

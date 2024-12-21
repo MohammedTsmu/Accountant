@@ -34,6 +34,10 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colTransactionID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDateAndTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAmountReceived = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnFilter = new DevExpress.XtraEditors.SimpleButton();
             this.btnDeleteTransaction = new DevExpress.XtraEditors.SimpleButton();
             this.btnEditTransaction = new DevExpress.XtraEditors.SimpleButton();
@@ -42,13 +46,11 @@
             this.lblTotalAmount = new DevExpress.XtraEditors.LabelControl();
             this.btnPrintReport = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.textEditCustomerName = new DevExpress.XtraEditors.TextEdit();
             this.spinEdit1 = new DevExpress.XtraEditors.SpinEdit();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.dateEditFrom = new DevExpress.XtraEditors.DateEdit();
-            this.colDateAndTime = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAmountReceived = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTransactionID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -58,6 +60,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditCustomerName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditFrom.Properties.CalendarTimeProperties)).BeginInit();
@@ -80,7 +83,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(157, 50);
+            this.textBox1.Location = new System.Drawing.Point(12, 20);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(386, 33);
             this.textBox1.TabIndex = 1;
@@ -88,7 +91,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(157, 89);
+            this.numericUpDown1.Location = new System.Drawing.Point(12, 89);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(376, 33);
             this.numericUpDown1.TabIndex = 2;
@@ -173,6 +176,46 @@
             this.colAmountReceived});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            // 
+            // colTransactionID
+            // 
+            this.colTransactionID.FieldName = "TransactionID";
+            this.colTransactionID.MinWidth = 25;
+            this.colTransactionID.Name = "colTransactionID";
+            this.colTransactionID.OptionsColumn.AllowEdit = false;
+            this.colTransactionID.Visible = true;
+            this.colTransactionID.VisibleIndex = 3;
+            this.colTransactionID.Width = 94;
+            // 
+            // colDateAndTime
+            // 
+            this.colDateAndTime.FieldName = "DateAndTime";
+            this.colDateAndTime.MinWidth = 25;
+            this.colDateAndTime.Name = "colDateAndTime";
+            this.colDateAndTime.OptionsColumn.AllowEdit = false;
+            this.colDateAndTime.Visible = true;
+            this.colDateAndTime.VisibleIndex = 0;
+            this.colDateAndTime.Width = 94;
+            // 
+            // colCustomerName
+            // 
+            this.colCustomerName.FieldName = "CustomerName";
+            this.colCustomerName.MinWidth = 25;
+            this.colCustomerName.Name = "colCustomerName";
+            this.colCustomerName.OptionsColumn.AllowEdit = false;
+            this.colCustomerName.Visible = true;
+            this.colCustomerName.VisibleIndex = 1;
+            this.colCustomerName.Width = 94;
+            // 
+            // colAmountReceived
+            // 
+            this.colAmountReceived.FieldName = "AmountReceived";
+            this.colAmountReceived.MinWidth = 25;
+            this.colAmountReceived.Name = "colAmountReceived";
+            this.colAmountReceived.OptionsColumn.AllowEdit = false;
+            this.colAmountReceived.Visible = true;
+            this.colAmountReceived.VisibleIndex = 2;
+            this.colAmountReceived.Width = 94;
             // 
             // btnFilter
             // 
@@ -264,6 +307,8 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.labelControl1);
+            this.panelControl2.Controls.Add(this.textEditCustomerName);
             this.panelControl2.Controls.Add(this.spinEdit1);
             this.panelControl2.Controls.Add(this.simpleButton8);
             this.panelControl2.Controls.Add(this.dateEditFrom);
@@ -276,6 +321,13 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1062, 132);
             this.panelControl2.TabIndex = 7;
+            // 
+            // textEditCustomerName
+            // 
+            this.textEditCustomerName.Location = new System.Drawing.Point(731, 82);
+            this.textEditCustomerName.Name = "textEditCustomerName";
+            this.textEditCustomerName.Size = new System.Drawing.Size(125, 22);
+            this.textEditCustomerName.TabIndex = 7;
             // 
             // spinEdit1
             // 
@@ -316,45 +368,15 @@
             this.dateEditFrom.Size = new System.Drawing.Size(156, 32);
             this.dateEditFrom.TabIndex = 0;
             // 
-            // colDateAndTime
+            // labelControl1
             // 
-            this.colDateAndTime.FieldName = "DateAndTime";
-            this.colDateAndTime.MinWidth = 25;
-            this.colDateAndTime.Name = "colDateAndTime";
-            this.colDateAndTime.OptionsColumn.AllowEdit = false;
-            this.colDateAndTime.Visible = true;
-            this.colDateAndTime.VisibleIndex = 0;
-            this.colDateAndTime.Width = 94;
-            // 
-            // colCustomerName
-            // 
-            this.colCustomerName.FieldName = "CustomerName";
-            this.colCustomerName.MinWidth = 25;
-            this.colCustomerName.Name = "colCustomerName";
-            this.colCustomerName.OptionsColumn.AllowEdit = false;
-            this.colCustomerName.Visible = true;
-            this.colCustomerName.VisibleIndex = 1;
-            this.colCustomerName.Width = 94;
-            // 
-            // colAmountReceived
-            // 
-            this.colAmountReceived.FieldName = "AmountReceived";
-            this.colAmountReceived.MinWidth = 25;
-            this.colAmountReceived.Name = "colAmountReceived";
-            this.colAmountReceived.OptionsColumn.AllowEdit = false;
-            this.colAmountReceived.Visible = true;
-            this.colAmountReceived.VisibleIndex = 2;
-            this.colAmountReceived.Width = 94;
-            // 
-            // colTransactionID
-            // 
-            this.colTransactionID.FieldName = "TransactionID";
-            this.colTransactionID.MinWidth = 25;
-            this.colTransactionID.Name = "colTransactionID";
-            this.colTransactionID.OptionsColumn.AllowEdit = false;
-            this.colTransactionID.Visible = true;
-            this.colTransactionID.VisibleIndex = 3;
-            this.colTransactionID.Width = 94;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(631, 50);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(225, 26);
+            this.labelControl1.TabIndex = 8;
+            this.labelControl1.Text = "تصفية حسب التاريخ والاسم";
             // 
             // MainForm
             // 
@@ -381,6 +403,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditCustomerName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditFrom.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditFrom.Properties)).EndInit();
@@ -410,6 +433,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colDateAndTime;
         private DevExpress.XtraGrid.Columns.GridColumn colCustomerName;
         private DevExpress.XtraGrid.Columns.GridColumn colAmountReceived;
+        private DevExpress.XtraEditors.TextEdit textEditCustomerName;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }
 
