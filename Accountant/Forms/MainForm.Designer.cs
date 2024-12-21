@@ -289,7 +289,7 @@
             this.btnFilter.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilter.Appearance.Options.UseFont = true;
             this.btnFilter.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFilter.ImageOptions.SvgImage")));
-            this.btnFilter.Location = new System.Drawing.Point(253, 59);
+            this.btnFilter.Location = new System.Drawing.Point(253, 54);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(153, 61);
             this.btnFilter.TabIndex = 4;
@@ -347,10 +347,12 @@
             // 
             // lblTotalAmount
             // 
-            this.lblTotalAmount.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.lblTotalAmount.Appearance.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.lblTotalAmount.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTotalAmount.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblTotalAmount.Appearance.Options.UseBackColor = true;
             this.lblTotalAmount.Appearance.Options.UseFont = true;
+            this.lblTotalAmount.Appearance.Options.UseForeColor = true;
             this.lblTotalAmount.Appearance.Options.UseTextOptions = true;
             this.lblTotalAmount.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblTotalAmount.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
@@ -419,7 +421,7 @@
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(412, 22);
+            this.labelControl2.Location = new System.Drawing.Point(412, 16);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(29, 26);
             this.labelControl2.TabIndex = 9;
@@ -439,7 +441,7 @@
             // textEditCustomerName
             // 
             this.textEditCustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textEditCustomerName.Location = new System.Drawing.Point(487, 67);
+            this.textEditCustomerName.Location = new System.Drawing.Point(487, 70);
             this.textEditCustomerName.Name = "textEditCustomerName";
             this.textEditCustomerName.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.textEditCustomerName.Properties.Appearance.Options.UseFont = true;
@@ -461,7 +463,7 @@
             // 
             this.dateEditFrom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateEditFrom.EditValue = null;
-            this.dateEditFrom.Location = new System.Drawing.Point(487, 13);
+            this.dateEditFrom.Location = new System.Drawing.Point(487, 16);
             this.dateEditFrom.Name = "dateEditFrom";
             this.dateEditFrom.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateEditFrom.Properties.Appearance.Options.UseFont = true;
