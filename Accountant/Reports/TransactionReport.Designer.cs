@@ -65,6 +65,9 @@
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.pFromDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pToDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efDataSource1)).BeginInit();
@@ -119,10 +122,11 @@
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel4,
             this.xrLabel3,
             this.label1});
             this.ReportHeader.Font = new DevExpress.Drawing.DXFont("LBC", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.ReportHeader.HeightF = 101.6667F;
+            this.ReportHeader.HeightF = 152.5F;
             this.ReportHeader.Name = "ReportHeader";
             this.ReportHeader.StylePriority.UseFont = false;
             // 
@@ -432,6 +436,38 @@
             this.xrLabel3.Text = "تقرير كشف المبالغ الواردة";
             this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
+            // pFromDate
+            // 
+            this.pFromDate.Description = "Parameter of From Date";
+            this.pFromDate.Name = "pFromDate";
+            this.pFromDate.Type = typeof(System.DateTime);
+            this.pFromDate.ValueInfo = "2024-12-21";
+            // 
+            // pToDate
+            // 
+            this.pToDate.Description = "Parameter of To Date";
+            this.pToDate.Name = "pToDate";
+            this.pToDate.Type = typeof(System.DateTime);
+            this.pToDate.ValueInfo = "2024-12-21";
+            // 
+            // xrLabel4
+            // 
+            this.xrLabel4.BackColor = System.Drawing.SystemColors.Info;
+            this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'تاريخ الكشف: من\' + ?pFromDate + \' الى \' + ?pToDate")});
+            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("LBC", 12F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel4.ForeColor = System.Drawing.Color.Black;
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 80.83334F);
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(727F, 71.66666F);
+            this.xrLabel4.StyleName = "Title";
+            this.xrLabel4.StylePriority.UseBackColor = false;
+            this.xrLabel4.StylePriority.UseFont = false;
+            this.xrLabel4.StylePriority.UseForeColor = false;
+            this.xrLabel4.StylePriority.UseTextAlignment = false;
+            this.xrLabel4.Text = "تقرير كشف المبالغ الواردة";
+            this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
             // TransactionReport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -451,7 +487,9 @@
             this.PageWidth = 827;
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
-            this.ReportTotal});
+            this.ReportTotal,
+            this.pFromDate,
+            this.pToDate});
             this.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes;
             this.RightToLeftLayout = DevExpress.XtraReports.UI.RightToLeftLayout.Yes;
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
@@ -509,5 +547,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+        private DevExpress.XtraReports.Parameters.Parameter pFromDate;
+        private DevExpress.XtraReports.Parameters.Parameter pToDate;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel4;
     }
 }
