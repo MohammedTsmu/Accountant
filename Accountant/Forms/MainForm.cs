@@ -221,11 +221,18 @@ namespace Accountant
                 report.DataSource = filteredTransactions;
                 report.DataMember = ""; // Ensure no specific data member is restricting the data
 
+                //var fromDate = dateEditFrom.DateTime.Date;
+                //var toDate = dateEditTo.DateTime.Date.AddDays(1).AddTicks(-1);
+                report.Parameters["pFromDate"].Value = dateEditFrom.DateOnly;
+                report.Parameters["pToDate"].Value = dateEditTo.DateOnly;
+
                 // Pass parameters if needed
                 if (report.Parameters["ReportTotal"] != null)
                 {
                     report.Parameters["ReportTotal"].Value = filteredTransactions.Sum(t => t.AmountReceived);
                     report.Parameters["ReportTotal"].Visible = false; // Avoid asking for the parameter value
+                    report.Parameters["pFromDate"].Visible = false;
+                    report.Parameters["pToDate"].Visible = false;
                 }
 
                 // Preview the report

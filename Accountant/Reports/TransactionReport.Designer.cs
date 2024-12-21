@@ -246,6 +246,7 @@
             this.tableCell6.StylePriority.UseFont = false;
             this.tableCell6.StylePriority.UseTextAlignment = false;
             this.tableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.tableCell6.TextFormatString = "{0:MMMM d, yyyy}";
             this.tableCell6.Weight = 0.23529021251316412D;
             // 
             // tableCell7
