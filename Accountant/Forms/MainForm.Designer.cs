@@ -358,7 +358,7 @@
             this.lblTotalAmount.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblTotalAmount.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblTotalAmount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTotalAmount.Location = new System.Drawing.Point(709, 2);
+            this.lblTotalAmount.Location = new System.Drawing.Point(2, 2);
             this.lblTotalAmount.Name = "lblTotalAmount";
             this.lblTotalAmount.Size = new System.Drawing.Size(351, 90);
             this.lblTotalAmount.TabIndex = 5;
@@ -370,8 +370,8 @@
             this.panelControl3.Controls.Add(this.btnDeleteTransaction);
             this.panelControl3.Controls.Add(this.btnPrintReport);
             this.panelControl3.Controls.Add(this.btnEditTransaction);
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl3.Location = new System.Drawing.Point(2, 2);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl3.Location = new System.Drawing.Point(353, 2);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(707, 90);
             this.panelControl3.TabIndex = 5;
@@ -487,6 +487,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "المحاسب";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties)).EndInit();
