@@ -47,7 +47,7 @@
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl3.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(276, 323);
+            this.labelControl3.Location = new System.Drawing.Point(231, 228);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(51, 26);
             this.labelControl3.TabIndex = 10;
@@ -58,7 +58,7 @@
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(254, 232);
+            this.labelControl2.Location = new System.Drawing.Point(209, 137);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(95, 26);
             this.labelControl2.TabIndex = 11;
@@ -69,7 +69,7 @@
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(276, 142);
+            this.labelControl1.Location = new System.Drawing.Point(231, 47);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(50, 26);
             this.labelControl1.TabIndex = 12;
@@ -81,8 +81,9 @@
             this.btnSave.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
-            this.btnSave.Location = new System.Drawing.Point(379, 475);
+            this.btnSave.Location = new System.Drawing.Point(334, 380);
             this.btnSave.Name = "btnSave";
+            this.btnSave.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSave.Size = new System.Drawing.Size(125, 56);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "حفظ";
@@ -94,8 +95,9 @@
             this.btnCancel.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
-            this.btnCancel.Location = new System.Drawing.Point(98, 475);
+            this.btnCancel.Location = new System.Drawing.Point(53, 380);
             this.btnCancel.Name = "btnCancel";
+            this.btnCancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnCancel.Size = new System.Drawing.Size(125, 56);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "الغاء";
@@ -108,12 +110,13 @@
             0,
             0,
             0});
-            this.spinEditAmount.Location = new System.Drawing.Point(98, 365);
+            this.spinEditAmount.Location = new System.Drawing.Point(53, 270);
             this.spinEditAmount.Name = "spinEditAmount";
             this.spinEditAmount.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spinEditAmount.Properties.Appearance.Options.UseFont = true;
             this.spinEditAmount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spinEditAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.spinEditAmount.Size = new System.Drawing.Size(406, 32);
             this.spinEditAmount.TabIndex = 7;
             // 
@@ -121,8 +124,9 @@
             // 
             this.textEditCustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEditCustomerName.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEditCustomerName.Location = new System.Drawing.Point(98, 274);
+            this.textEditCustomerName.Location = new System.Drawing.Point(53, 179);
             this.textEditCustomerName.Name = "textEditCustomerName";
+            this.textEditCustomerName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textEditCustomerName.Size = new System.Drawing.Size(406, 33);
             this.textEditCustomerName.TabIndex = 6;
             // 
@@ -130,7 +134,7 @@
             // 
             this.dateEditTransaction.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateEditTransaction.EditValue = null;
-            this.dateEditTransaction.Location = new System.Drawing.Point(98, 184);
+            this.dateEditTransaction.Location = new System.Drawing.Point(53, 89);
             this.dateEditTransaction.Name = "dateEditTransaction";
             this.dateEditTransaction.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateEditTransaction.Properties.Appearance.Options.UseFont = true;
@@ -138,6 +142,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditTransaction.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditTransaction.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateEditTransaction.Size = new System.Drawing.Size(406, 32);
             this.dateEditTransaction.TabIndex = 5;
             // 
@@ -145,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 673);
+            this.ClientSize = new System.Drawing.Size(512, 483);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);

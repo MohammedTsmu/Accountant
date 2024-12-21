@@ -77,6 +77,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditTo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateEditTo.Size = new System.Drawing.Size(266, 32);
             this.dateEditTo.TabIndex = 0;
             // 
@@ -291,6 +292,7 @@
             this.btnFilter.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFilter.ImageOptions.SvgImage")));
             this.btnFilter.Location = new System.Drawing.Point(253, 54);
             this.btnFilter.Name = "btnFilter";
+            this.btnFilter.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnFilter.Size = new System.Drawing.Size(153, 61);
             this.btnFilter.TabIndex = 4;
             this.btnFilter.Text = "تصفية";
@@ -304,6 +306,7 @@
             this.btnDeleteTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteTransaction.ImageOptions.SvgImage")));
             this.btnDeleteTransaction.Location = new System.Drawing.Point(195, 15);
             this.btnDeleteTransaction.Name = "btnDeleteTransaction";
+            this.btnDeleteTransaction.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnDeleteTransaction.Size = new System.Drawing.Size(153, 61);
             this.btnDeleteTransaction.TabIndex = 3;
             this.btnDeleteTransaction.Text = "حذف";
@@ -317,6 +320,7 @@
             this.btnEditTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditTransaction.ImageOptions.SvgImage")));
             this.btnEditTransaction.Location = new System.Drawing.Point(358, 15);
             this.btnEditTransaction.Name = "btnEditTransaction";
+            this.btnEditTransaction.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnEditTransaction.Size = new System.Drawing.Size(153, 61);
             this.btnEditTransaction.TabIndex = 2;
             this.btnEditTransaction.Text = "تعديل";
@@ -330,6 +334,7 @@
             this.btnAddTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddTransaction.ImageOptions.SvgImage")));
             this.btnAddTransaction.Location = new System.Drawing.Point(521, 15);
             this.btnAddTransaction.Name = "btnAddTransaction";
+            this.btnAddTransaction.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnAddTransaction.Size = new System.Drawing.Size(153, 61);
             this.btnAddTransaction.TabIndex = 1;
             this.btnAddTransaction.Text = "اضافة";
@@ -384,6 +389,7 @@
             this.btnPrintReport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintReport.ImageOptions.SvgImage")));
             this.btnPrintReport.Location = new System.Drawing.Point(32, 15);
             this.btnPrintReport.Name = "btnPrintReport";
+            this.btnPrintReport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnPrintReport.Size = new System.Drawing.Size(153, 61);
             this.btnPrintReport.TabIndex = 4;
             this.btnPrintReport.Text = "انشاء تقرير";
@@ -445,6 +451,7 @@
             this.textEditCustomerName.Name = "textEditCustomerName";
             this.textEditCustomerName.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.textEditCustomerName.Properties.Appearance.Options.UseFont = true;
+            this.textEditCustomerName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textEditCustomerName.Size = new System.Drawing.Size(222, 32);
             this.textEditCustomerName.TabIndex = 7;
             // 
@@ -471,6 +478,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditFrom.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateEditFrom.Size = new System.Drawing.Size(306, 32);
             this.dateEditFrom.TabIndex = 0;
             // 
