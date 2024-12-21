@@ -29,26 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.dateEditTo = new DevExpress.XtraEditors.DateEdit();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colDateAndTime = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAmountReceived = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTransactionID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFilter = new DevExpress.XtraEditors.SimpleButton();
             this.btnDeleteTransaction = new DevExpress.XtraEditors.SimpleButton();
             this.btnEditTransaction = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddTransaction = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.lblTotalAmount = new DevExpress.XtraEditors.LabelControl();
+            this.btnPrintReport = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.spinEdit1 = new DevExpress.XtraEditors.SpinEdit();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            this.dateEditFrom = new DevExpress.XtraEditors.DateEdit();
+            this.colDateAndTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAmountReceived = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTransactionID = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -57,26 +59,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditFrom.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditFrom.Properties.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateEdit1
+            // dateEditTo
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(12, 12);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateEdit1.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditTo.EditValue = null;
+            this.dateEditTo.Location = new System.Drawing.Point(697, 12);
+            this.dateEditTo.Name = "dateEditTo";
+            this.dateEditTo.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateEditTo.Properties.Appearance.Options.UseFont = true;
+            this.dateEditTo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditTo.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(156, 32);
-            this.dateEdit1.TabIndex = 0;
+            this.dateEditTo.Size = new System.Drawing.Size(156, 32);
+            this.dateEditTo.TabIndex = 0;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(563, 15);
+            this.textBox1.Location = new System.Drawing.Point(157, 50);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(386, 33);
             this.textBox1.TabIndex = 1;
@@ -84,7 +88,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(563, 54);
+            this.numericUpDown1.Location = new System.Drawing.Point(157, 89);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(376, 33);
             this.numericUpDown1.TabIndex = 2;
@@ -163,68 +167,25 @@
             this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.ViewCaption.Options.UseFont = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colTransactionID,
             this.colDateAndTime,
             this.colCustomerName,
-            this.colAmountReceived,
-            this.colTransactionID});
+            this.colAmountReceived});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // colDateAndTime
+            // btnFilter
             // 
-            this.colDateAndTime.Caption = "التاريخ والوقت";
-            this.colDateAndTime.FieldName = "DateAndTime";
-            this.colDateAndTime.MinWidth = 25;
-            this.colDateAndTime.Name = "colDateAndTime";
-            this.colDateAndTime.OptionsColumn.AllowEdit = false;
-            this.colDateAndTime.Visible = true;
-            this.colDateAndTime.VisibleIndex = 0;
-            this.colDateAndTime.Width = 94;
-            // 
-            // colCustomerName
-            // 
-            this.colCustomerName.Caption = "اسم العميل";
-            this.colCustomerName.FieldName = "CustomerName";
-            this.colCustomerName.MinWidth = 25;
-            this.colCustomerName.Name = "colCustomerName";
-            this.colCustomerName.OptionsColumn.AllowEdit = false;
-            this.colCustomerName.Visible = true;
-            this.colCustomerName.VisibleIndex = 1;
-            this.colCustomerName.Width = 94;
-            // 
-            // colAmountReceived
-            // 
-            this.colAmountReceived.Caption = "المبلغ المستلم";
-            this.colAmountReceived.FieldName = "AmountReceived";
-            this.colAmountReceived.MinWidth = 25;
-            this.colAmountReceived.Name = "colAmountReceived";
-            this.colAmountReceived.OptionsColumn.AllowEdit = false;
-            this.colAmountReceived.Visible = true;
-            this.colAmountReceived.VisibleIndex = 2;
-            this.colAmountReceived.Width = 94;
-            // 
-            // colTransactionID
-            // 
-            this.colTransactionID.Caption = "اي دي";
-            this.colTransactionID.FieldName = "TransactionID";
-            this.colTransactionID.MinWidth = 25;
-            this.colTransactionID.Name = "colTransactionID";
-            this.colTransactionID.OptionsColumn.AllowEdit = false;
-            this.colTransactionID.Visible = true;
-            this.colTransactionID.VisibleIndex = 3;
-            this.colTransactionID.Width = 94;
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(289, 16);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(153, 61);
-            this.simpleButton2.TabIndex = 4;
-            this.simpleButton2.Text = "تصفية";
+            this.btnFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFilter.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.Appearance.Options.UseFont = true;
+            this.btnFilter.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFilter.ImageOptions.SvgImage")));
+            this.btnFilter.Location = new System.Drawing.Point(862, 50);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(153, 61);
+            this.btnFilter.TabIndex = 4;
+            this.btnFilter.Text = "تصفية";
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // btnDeleteTransaction
             // 
@@ -232,7 +193,7 @@
             this.btnDeleteTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTransaction.Appearance.Options.UseFont = true;
             this.btnDeleteTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteTransaction.ImageOptions.SvgImage")));
-            this.btnDeleteTransaction.Location = new System.Drawing.Point(455, 16);
+            this.btnDeleteTransaction.Location = new System.Drawing.Point(556, 16);
             this.btnDeleteTransaction.Name = "btnDeleteTransaction";
             this.btnDeleteTransaction.Size = new System.Drawing.Size(153, 61);
             this.btnDeleteTransaction.TabIndex = 3;
@@ -245,7 +206,7 @@
             this.btnEditTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditTransaction.Appearance.Options.UseFont = true;
             this.btnEditTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditTransaction.ImageOptions.SvgImage")));
-            this.btnEditTransaction.Location = new System.Drawing.Point(621, 16);
+            this.btnEditTransaction.Location = new System.Drawing.Point(722, 16);
             this.btnEditTransaction.Name = "btnEditTransaction";
             this.btnEditTransaction.Size = new System.Drawing.Size(153, 61);
             this.btnEditTransaction.TabIndex = 2;
@@ -258,7 +219,7 @@
             this.btnAddTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTransaction.Appearance.Options.UseFont = true;
             this.btnAddTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddTransaction.ImageOptions.SvgImage")));
-            this.btnAddTransaction.Location = new System.Drawing.Point(787, 16);
+            this.btnAddTransaction.Location = new System.Drawing.Point(888, 16);
             this.btnAddTransaction.Name = "btnAddTransaction";
             this.btnAddTransaction.Size = new System.Drawing.Size(153, 61);
             this.btnAddTransaction.TabIndex = 1;
@@ -267,34 +228,47 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.lblTotalAmount);
             this.panelControl1.Controls.Add(this.btnDeleteTransaction);
             this.panelControl1.Controls.Add(this.btnEditTransaction);
             this.panelControl1.Controls.Add(this.btnAddTransaction);
-            this.panelControl1.Controls.Add(this.simpleButton1);
-            this.panelControl1.Controls.Add(this.simpleButton2);
+            this.panelControl1.Controls.Add(this.btnPrintReport);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl1.Location = new System.Drawing.Point(0, 581);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1062, 92);
             this.panelControl1.TabIndex = 6;
             // 
-            // simpleButton1
+            // lblTotalAmount
             // 
-            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(123, 16);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(153, 61);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "انشاء تقرير";
+            this.lblTotalAmount.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTotalAmount.Appearance.Options.UseFont = true;
+            this.lblTotalAmount.Location = new System.Drawing.Point(78, 35);
+            this.lblTotalAmount.Name = "lblTotalAmount";
+            this.lblTotalAmount.Size = new System.Drawing.Size(178, 26);
+            this.lblTotalAmount.TabIndex = 5;
+            this.lblTotalAmount.Text = "Total Amount: 0.00";
+            // 
+            // btnPrintReport
+            // 
+            this.btnPrintReport.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPrintReport.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintReport.Appearance.Options.UseFont = true;
+            this.btnPrintReport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintReport.ImageOptions.SvgImage")));
+            this.btnPrintReport.Location = new System.Drawing.Point(397, 16);
+            this.btnPrintReport.Name = "btnPrintReport";
+            this.btnPrintReport.Size = new System.Drawing.Size(153, 61);
+            this.btnPrintReport.TabIndex = 4;
+            this.btnPrintReport.Text = "انشاء تقرير";
+            this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
             // 
             // panelControl2
             // 
             this.panelControl2.Controls.Add(this.spinEdit1);
             this.panelControl2.Controls.Add(this.simpleButton8);
-            this.panelControl2.Controls.Add(this.dateEdit1);
+            this.panelControl2.Controls.Add(this.dateEditFrom);
+            this.panelControl2.Controls.Add(this.dateEditTo);
+            this.panelControl2.Controls.Add(this.btnFilter);
             this.panelControl2.Controls.Add(this.textBox1);
             this.panelControl2.Controls.Add(this.numericUpDown1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -310,7 +284,7 @@
             0,
             0,
             0});
-            this.spinEdit1.Location = new System.Drawing.Point(122, 79);
+            this.spinEdit1.Location = new System.Drawing.Point(12, 59);
             this.spinEdit1.Name = "spinEdit1";
             this.spinEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -328,6 +302,60 @@
             this.simpleButton8.TabIndex = 5;
             this.simpleButton8.Text = "انشاء تقرير";
             // 
+            // dateEditFrom
+            // 
+            this.dateEditFrom.EditValue = null;
+            this.dateEditFrom.Location = new System.Drawing.Point(859, 12);
+            this.dateEditFrom.Name = "dateEditFrom";
+            this.dateEditFrom.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateEditFrom.Properties.Appearance.Options.UseFont = true;
+            this.dateEditFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditFrom.Size = new System.Drawing.Size(156, 32);
+            this.dateEditFrom.TabIndex = 0;
+            // 
+            // colDateAndTime
+            // 
+            this.colDateAndTime.FieldName = "DateAndTime";
+            this.colDateAndTime.MinWidth = 25;
+            this.colDateAndTime.Name = "colDateAndTime";
+            this.colDateAndTime.OptionsColumn.AllowEdit = false;
+            this.colDateAndTime.Visible = true;
+            this.colDateAndTime.VisibleIndex = 0;
+            this.colDateAndTime.Width = 94;
+            // 
+            // colCustomerName
+            // 
+            this.colCustomerName.FieldName = "CustomerName";
+            this.colCustomerName.MinWidth = 25;
+            this.colCustomerName.Name = "colCustomerName";
+            this.colCustomerName.OptionsColumn.AllowEdit = false;
+            this.colCustomerName.Visible = true;
+            this.colCustomerName.VisibleIndex = 1;
+            this.colCustomerName.Width = 94;
+            // 
+            // colAmountReceived
+            // 
+            this.colAmountReceived.FieldName = "AmountReceived";
+            this.colAmountReceived.MinWidth = 25;
+            this.colAmountReceived.Name = "colAmountReceived";
+            this.colAmountReceived.OptionsColumn.AllowEdit = false;
+            this.colAmountReceived.Visible = true;
+            this.colAmountReceived.VisibleIndex = 2;
+            this.colAmountReceived.Width = 94;
+            // 
+            // colTransactionID
+            // 
+            this.colTransactionID.FieldName = "TransactionID";
+            this.colTransactionID.MinWidth = 25;
+            this.colTransactionID.Name = "colTransactionID";
+            this.colTransactionID.OptionsColumn.AllowEdit = false;
+            this.colTransactionID.Visible = true;
+            this.colTransactionID.VisibleIndex = 3;
+            this.colTransactionID.Width = 94;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
@@ -341,41 +369,47 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "المحاسب";
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spinEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditFrom.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditFrom.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit dateEditTo;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnFilter;
         private DevExpress.XtraEditors.SimpleButton btnDeleteTransaction;
         private DevExpress.XtraEditors.SimpleButton btnEditTransaction;
         private DevExpress.XtraEditors.SimpleButton btnAddTransaction;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.SimpleButton simpleButton8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnPrintReport;
         private DevExpress.XtraEditors.SpinEdit spinEdit1;
+        private DevExpress.XtraEditors.DateEdit dateEditFrom;
+        private DevExpress.XtraEditors.LabelControl lblTotalAmount;
+        private DevExpress.XtraGrid.Columns.GridColumn colTransactionID;
         private DevExpress.XtraGrid.Columns.GridColumn colDateAndTime;
         private DevExpress.XtraGrid.Columns.GridColumn colCustomerName;
         private DevExpress.XtraGrid.Columns.GridColumn colAmountReceived;
-        private DevExpress.XtraGrid.Columns.GridColumn colTransactionID;
     }
 }
 
