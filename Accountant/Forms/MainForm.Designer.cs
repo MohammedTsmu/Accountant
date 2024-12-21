@@ -34,7 +34,6 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colTransactionID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDateAndTime = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomerName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAmountReceived = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -46,11 +45,11 @@
             this.lblTotalAmount = new DevExpress.XtraEditors.LabelControl();
             this.btnPrintReport = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.textEditCustomerName = new DevExpress.XtraEditors.TextEdit();
             this.spinEdit1 = new DevExpress.XtraEditors.SpinEdit();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.dateEditFrom = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTo.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -170,25 +169,15 @@
             this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.ViewCaption.Options.UseFont = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colTransactionID,
             this.colDateAndTime,
             this.colCustomerName,
             this.colAmountReceived});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // colTransactionID
-            // 
-            this.colTransactionID.FieldName = "TransactionID";
-            this.colTransactionID.MinWidth = 25;
-            this.colTransactionID.Name = "colTransactionID";
-            this.colTransactionID.OptionsColumn.AllowEdit = false;
-            this.colTransactionID.Visible = true;
-            this.colTransactionID.VisibleIndex = 3;
-            this.colTransactionID.Width = 94;
-            // 
             // colDateAndTime
             // 
+            this.colDateAndTime.Caption = "التاريخ";
             this.colDateAndTime.FieldName = "DateAndTime";
             this.colDateAndTime.MinWidth = 25;
             this.colDateAndTime.Name = "colDateAndTime";
@@ -199,6 +188,7 @@
             // 
             // colCustomerName
             // 
+            this.colCustomerName.Caption = "اسم العميل";
             this.colCustomerName.FieldName = "CustomerName";
             this.colCustomerName.MinWidth = 25;
             this.colCustomerName.Name = "colCustomerName";
@@ -209,6 +199,9 @@
             // 
             // colAmountReceived
             // 
+            this.colAmountReceived.Caption = "المبلغ المستلم";
+            this.colAmountReceived.DisplayFormat.FormatString = "N2";
+            this.colAmountReceived.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAmountReceived.FieldName = "AmountReceived";
             this.colAmountReceived.MinWidth = 25;
             this.colAmountReceived.Name = "colAmountReceived";
@@ -322,6 +315,16 @@
             this.panelControl2.Size = new System.Drawing.Size(1062, 132);
             this.panelControl2.TabIndex = 7;
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(631, 50);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(225, 26);
+            this.labelControl1.TabIndex = 8;
+            this.labelControl1.Text = "تصفية حسب التاريخ والاسم";
+            // 
             // textEditCustomerName
             // 
             this.textEditCustomerName.Location = new System.Drawing.Point(731, 82);
@@ -367,16 +370,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditFrom.Size = new System.Drawing.Size(156, 32);
             this.dateEditFrom.TabIndex = 0;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(631, 50);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(225, 26);
-            this.labelControl1.TabIndex = 8;
-            this.labelControl1.Text = "تصفية حسب التاريخ والاسم";
             // 
             // MainForm
             // 
@@ -429,7 +422,6 @@
         private DevExpress.XtraEditors.SpinEdit spinEdit1;
         private DevExpress.XtraEditors.DateEdit dateEditFrom;
         private DevExpress.XtraEditors.LabelControl lblTotalAmount;
-        private DevExpress.XtraGrid.Columns.GridColumn colTransactionID;
         private DevExpress.XtraGrid.Columns.GridColumn colDateAndTime;
         private DevExpress.XtraGrid.Columns.GridColumn colCustomerName;
         private DevExpress.XtraGrid.Columns.GridColumn colAmountReceived;
