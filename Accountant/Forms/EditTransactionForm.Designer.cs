@@ -154,8 +154,13 @@
             this.Controls.Add(this.spinEditAmount);
             this.Controls.Add(this.textEditCustomerName);
             this.Controls.Add(this.dateEditTransaction);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EditTransactionForm";
-            this.Text = "EditTransactionForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "تعديل سجل";
             ((System.ComponentModel.ISupportInitialize)(this.spinEditAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTransaction.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditTransaction.Properties)).EndInit();

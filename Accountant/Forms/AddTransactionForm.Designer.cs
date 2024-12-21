@@ -46,7 +46,8 @@
             // 
             this.dateEditTransaction.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateEditTransaction.EditValue = "";
-            this.dateEditTransaction.Location = new System.Drawing.Point(96, 184);
+            this.dateEditTransaction.Location = new System.Drawing.Point(98, 187);
+            this.dateEditTransaction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateEditTransaction.Name = "dateEditTransaction";
             this.dateEditTransaction.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateEditTransaction.Properties.Appearance.Options.UseFont = true;
@@ -61,7 +62,8 @@
             // 
             this.textEditCustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEditCustomerName.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEditCustomerName.Location = new System.Drawing.Point(96, 274);
+            this.textEditCustomerName.Location = new System.Drawing.Point(98, 277);
+            this.textEditCustomerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textEditCustomerName.Name = "textEditCustomerName";
             this.textEditCustomerName.Size = new System.Drawing.Size(406, 33);
             this.textEditCustomerName.TabIndex = 1;
@@ -74,7 +76,8 @@
             0,
             0,
             0});
-            this.spinEditAmount.Location = new System.Drawing.Point(96, 365);
+            this.spinEditAmount.Location = new System.Drawing.Point(98, 368);
+            this.spinEditAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.spinEditAmount.Name = "spinEditAmount";
             this.spinEditAmount.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spinEditAmount.Properties.Appearance.Options.UseFont = true;
@@ -89,7 +92,8 @@
             this.btnCancel.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
-            this.btnCancel.Location = new System.Drawing.Point(96, 475);
+            this.btnCancel.Location = new System.Drawing.Point(98, 472);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(125, 56);
             this.btnCancel.TabIndex = 3;
@@ -101,7 +105,8 @@
             this.btnSave.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
-            this.btnSave.Location = new System.Drawing.Point(377, 475);
+            this.btnSave.Location = new System.Drawing.Point(379, 472);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(125, 56);
             this.btnSave.TabIndex = 3;
@@ -113,7 +118,8 @@
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(274, 142);
+            this.labelControl1.Location = new System.Drawing.Point(276, 145);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(50, 26);
             this.labelControl1.TabIndex = 4;
@@ -124,7 +130,8 @@
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(252, 232);
+            this.labelControl2.Location = new System.Drawing.Point(254, 235);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(95, 26);
             this.labelControl2.TabIndex = 4;
@@ -135,7 +142,8 @@
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl3.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(274, 323);
+            this.labelControl3.Location = new System.Drawing.Point(276, 326);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(51, 26);
             this.labelControl3.TabIndex = 4;
@@ -143,9 +151,9 @@
             // 
             // AddTransactionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 673);
+            this.ClientSize = new System.Drawing.Size(602, 673);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
@@ -154,8 +162,7 @@
             this.Controls.Add(this.spinEditAmount);
             this.Controls.Add(this.textEditCustomerName);
             this.Controls.Add(this.dateEditTransaction);
-            this.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddTransactionForm";
