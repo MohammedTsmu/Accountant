@@ -41,6 +41,7 @@
             this.btnAddTransaction = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.lblTotalAmount = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.btnPrintReport = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -55,6 +56,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCustomerName.Properties)).BeginInit();
@@ -299,7 +302,7 @@
             this.btnDeleteTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTransaction.Appearance.Options.UseFont = true;
             this.btnDeleteTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteTransaction.ImageOptions.SvgImage")));
-            this.btnDeleteTransaction.Location = new System.Drawing.Point(560, 17);
+            this.btnDeleteTransaction.Location = new System.Drawing.Point(195, 15);
             this.btnDeleteTransaction.Name = "btnDeleteTransaction";
             this.btnDeleteTransaction.Size = new System.Drawing.Size(153, 61);
             this.btnDeleteTransaction.TabIndex = 3;
@@ -312,7 +315,7 @@
             this.btnEditTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditTransaction.Appearance.Options.UseFont = true;
             this.btnEditTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditTransaction.ImageOptions.SvgImage")));
-            this.btnEditTransaction.Location = new System.Drawing.Point(723, 17);
+            this.btnEditTransaction.Location = new System.Drawing.Point(358, 15);
             this.btnEditTransaction.Name = "btnEditTransaction";
             this.btnEditTransaction.Size = new System.Drawing.Size(153, 61);
             this.btnEditTransaction.TabIndex = 2;
@@ -325,7 +328,7 @@
             this.btnAddTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTransaction.Appearance.Options.UseFont = true;
             this.btnAddTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddTransaction.ImageOptions.SvgImage")));
-            this.btnAddTransaction.Location = new System.Drawing.Point(886, 17);
+            this.btnAddTransaction.Location = new System.Drawing.Point(521, 15);
             this.btnAddTransaction.Name = "btnAddTransaction";
             this.btnAddTransaction.Size = new System.Drawing.Size(153, 61);
             this.btnAddTransaction.TabIndex = 1;
@@ -335,10 +338,7 @@
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.lblTotalAmount);
-            this.panelControl1.Controls.Add(this.btnDeleteTransaction);
-            this.panelControl1.Controls.Add(this.btnEditTransaction);
-            this.panelControl1.Controls.Add(this.btnAddTransaction);
-            this.panelControl1.Controls.Add(this.btnPrintReport);
+            this.panelControl1.Controls.Add(this.panelControl3);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl1.Location = new System.Drawing.Point(0, 579);
             this.panelControl1.Name = "panelControl1";
@@ -347,18 +347,32 @@
             // 
             // lblTotalAmount
             // 
+            this.lblTotalAmount.Appearance.BackColor = System.Drawing.Color.Silver;
             this.lblTotalAmount.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTotalAmount.Appearance.Options.UseBackColor = true;
             this.lblTotalAmount.Appearance.Options.UseFont = true;
             this.lblTotalAmount.Appearance.Options.UseTextOptions = true;
             this.lblTotalAmount.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblTotalAmount.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblTotalAmount.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblTotalAmount.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTotalAmount.Location = new System.Drawing.Point(2, 2);
+            this.lblTotalAmount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTotalAmount.Location = new System.Drawing.Point(709, 2);
             this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(389, 90);
+            this.lblTotalAmount.Size = new System.Drawing.Size(351, 90);
             this.lblTotalAmount.TabIndex = 5;
             this.lblTotalAmount.Text = "اجمالي المبلغ الوارد: 0.00";
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Controls.Add(this.btnAddTransaction);
+            this.panelControl3.Controls.Add(this.btnDeleteTransaction);
+            this.panelControl3.Controls.Add(this.btnPrintReport);
+            this.panelControl3.Controls.Add(this.btnEditTransaction);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelControl3.Location = new System.Drawing.Point(2, 2);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(707, 90);
+            this.panelControl3.TabIndex = 5;
             // 
             // btnPrintReport
             // 
@@ -366,7 +380,7 @@
             this.btnPrintReport.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintReport.Appearance.Options.UseFont = true;
             this.btnPrintReport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintReport.ImageOptions.SvgImage")));
-            this.btnPrintReport.Location = new System.Drawing.Point(397, 17);
+            this.btnPrintReport.Location = new System.Drawing.Point(32, 15);
             this.btnPrintReport.Name = "btnPrintReport";
             this.btnPrintReport.Size = new System.Drawing.Size(153, 61);
             this.btnPrintReport.TabIndex = 4;
@@ -478,6 +492,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
@@ -510,6 +526,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.PanelControl panelControl3;
     }
 }
 
