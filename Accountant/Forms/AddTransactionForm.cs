@@ -1,4 +1,5 @@
 ﻿using Accountant.Models;
+using DevExpress.XtraEditors;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,6 +11,8 @@ namespace Accountant
         public AddTransactionForm()
         {
             InitializeComponent();
+
+            dateEditTransaction.DateTime = DateTime.Now;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
