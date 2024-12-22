@@ -369,7 +369,7 @@
             // lblTotalAmount
             // 
             this.lblTotalAmount.Appearance.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblTotalAmount.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTotalAmount.Appearance.Font = new System.Drawing.Font("LBC", 16F, System.Drawing.FontStyle.Bold);
             this.lblTotalAmount.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblTotalAmount.Appearance.Options.UseBackColor = true;
             this.lblTotalAmount.Appearance.Options.UseFont = true;
