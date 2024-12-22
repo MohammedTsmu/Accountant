@@ -42,9 +42,9 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.lblTotalAmount = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.svgImageBoxAbout = new DevExpress.XtraEditors.SvgImageBox();
             this.svgImageBoxSettings = new DevExpress.XtraEditors.SvgImageBox();
             this.btnPrintReport = new DevExpress.XtraEditors.SimpleButton();
+            this.svgImageBoxAbout = new DevExpress.XtraEditors.SvgImageBox();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -60,8 +60,8 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBoxAbout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBoxSettings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBoxAbout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCustomerName.Properties)).BeginInit();
@@ -73,7 +73,7 @@
             // 
             this.dateEditTo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateEditTo.EditValue = null;
-            this.dateEditTo.Location = new System.Drawing.Point(12, 10);
+            this.dateEditTo.Location = new System.Drawing.Point(96, 10);
             this.dateEditTo.Margin = new System.Windows.Forms.Padding(10);
             this.dateEditTo.Name = "dateEditTo";
             this.dateEditTo.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,7 +98,7 @@
             this.gridControl1.Margin = new System.Windows.Forms.Padding(10);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl1.Size = new System.Drawing.Size(1062, 469);
+            this.gridControl1.Size = new System.Drawing.Size(1231, 469);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -300,7 +300,7 @@
             this.btnFilter.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilter.Appearance.Options.UseFont = true;
             this.btnFilter.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFilter.ImageOptions.SvgImage")));
-            this.btnFilter.Location = new System.Drawing.Point(238, 54);
+            this.btnFilter.Location = new System.Drawing.Point(322, 54);
             this.btnFilter.Margin = new System.Windows.Forms.Padding(10);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -317,7 +317,7 @@
             this.btnDeleteTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTransaction.Appearance.Options.UseFont = true;
             this.btnDeleteTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteTransaction.ImageOptions.SvgImage")));
-            this.btnDeleteTransaction.Location = new System.Drawing.Point(175, 8);
+            this.btnDeleteTransaction.Location = new System.Drawing.Point(225, 8);
             this.btnDeleteTransaction.Margin = new System.Windows.Forms.Padding(10);
             this.btnDeleteTransaction.Name = "btnDeleteTransaction";
             this.btnDeleteTransaction.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -333,7 +333,7 @@
             this.btnEditTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditTransaction.Appearance.Options.UseFont = true;
             this.btnEditTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditTransaction.ImageOptions.SvgImage")));
-            this.btnEditTransaction.Location = new System.Drawing.Point(326, 8);
+            this.btnEditTransaction.Location = new System.Drawing.Point(376, 8);
             this.btnEditTransaction.Margin = new System.Windows.Forms.Padding(10);
             this.btnEditTransaction.Name = "btnEditTransaction";
             this.btnEditTransaction.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -349,7 +349,7 @@
             this.btnAddTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTransaction.Appearance.Options.UseFont = true;
             this.btnAddTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddTransaction.ImageOptions.SvgImage")));
-            this.btnAddTransaction.Location = new System.Drawing.Point(477, 8);
+            this.btnAddTransaction.Location = new System.Drawing.Point(527, 8);
             this.btnAddTransaction.Margin = new System.Windows.Forms.Padding(10);
             this.btnAddTransaction.Name = "btnAddTransaction";
             this.btnAddTransaction.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -367,7 +367,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 602);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(10);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1062, 80);
+            this.panelControl1.Size = new System.Drawing.Size(1231, 80);
             this.panelControl1.TabIndex = 6;
             // 
             // lblTotalAmount
@@ -386,7 +386,7 @@
             this.lblTotalAmount.Location = new System.Drawing.Point(2, 2);
             this.lblTotalAmount.Margin = new System.Windows.Forms.Padding(10);
             this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(352, 76);
+            this.lblTotalAmount.Size = new System.Drawing.Size(420, 76);
             this.lblTotalAmount.TabIndex = 5;
             this.lblTotalAmount.Text = "اجمالي المبلغ الوارد: 0.00";
             // 
@@ -399,31 +399,17 @@
             this.panelControl3.Controls.Add(this.btnPrintReport);
             this.panelControl3.Controls.Add(this.btnEditTransaction);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl3.Location = new System.Drawing.Point(354, 2);
+            this.panelControl3.Location = new System.Drawing.Point(422, 2);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(10);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(706, 76);
+            this.panelControl3.Size = new System.Drawing.Size(807, 76);
             this.panelControl3.TabIndex = 5;
-            // 
-            // svgImageBoxAbout
-            // 
-            this.svgImageBoxAbout.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.svgImageBoxAbout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.svgImageBoxAbout.Location = new System.Drawing.Point(323, 8);
-            this.svgImageBoxAbout.Margin = new System.Windows.Forms.Padding(10);
-            this.svgImageBoxAbout.Name = "svgImageBoxAbout";
-            this.svgImageBoxAbout.Size = new System.Drawing.Size(60, 60);
-            this.svgImageBoxAbout.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBoxAbout.SvgImage")));
-            this.svgImageBoxAbout.TabIndex = 7;
-            this.svgImageBoxAbout.Text = "svgImageBox1";
-            this.svgImageBoxAbout.ToolTip = "حول البرنامج";
-            this.svgImageBoxAbout.Click += new System.EventHandler(this.svgImageBoxAbout_Click);
             // 
             // svgImageBoxSettings
             // 
             this.svgImageBoxSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.svgImageBoxSettings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.svgImageBoxSettings.Location = new System.Drawing.Point(623, 8);
+            this.svgImageBoxSettings.Location = new System.Drawing.Point(673, 8);
             this.svgImageBoxSettings.Margin = new System.Windows.Forms.Padding(10);
             this.svgImageBoxSettings.Name = "svgImageBoxSettings";
             this.svgImageBoxSettings.Size = new System.Drawing.Size(60, 60);
@@ -439,7 +425,7 @@
             this.btnPrintReport.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintReport.Appearance.Options.UseFont = true;
             this.btnPrintReport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintReport.ImageOptions.SvgImage")));
-            this.btnPrintReport.Location = new System.Drawing.Point(24, 8);
+            this.btnPrintReport.Location = new System.Drawing.Point(74, 8);
             this.btnPrintReport.Margin = new System.Windows.Forms.Padding(10);
             this.btnPrintReport.Name = "btnPrintReport";
             this.btnPrintReport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -448,6 +434,20 @@
             this.btnPrintReport.Text = "انشاء تقرير";
             this.btnPrintReport.ToolTip = "انشاء وطباعة تقرير";
             this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
+            // 
+            // svgImageBoxAbout
+            // 
+            this.svgImageBoxAbout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.svgImageBoxAbout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.svgImageBoxAbout.Location = new System.Drawing.Point(737, 8);
+            this.svgImageBoxAbout.Margin = new System.Windows.Forms.Padding(10);
+            this.svgImageBoxAbout.Name = "svgImageBoxAbout";
+            this.svgImageBoxAbout.Size = new System.Drawing.Size(60, 60);
+            this.svgImageBoxAbout.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBoxAbout.SvgImage")));
+            this.svgImageBoxAbout.TabIndex = 7;
+            this.svgImageBoxAbout.Text = "svgImageBox1";
+            this.svgImageBoxAbout.ToolTip = "حول البرنامج";
+            this.svgImageBoxAbout.Click += new System.EventHandler(this.svgImageBoxAbout_Click);
             // 
             // panelControl2
             // 
@@ -463,7 +463,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(10);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1062, 133);
+            this.panelControl2.Size = new System.Drawing.Size(1231, 133);
             this.panelControl2.TabIndex = 7;
             // 
             // labelControl3
@@ -471,7 +471,7 @@
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl3.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(860, 13);
+            this.labelControl3.Location = new System.Drawing.Point(944, 13);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(10);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(140, 26);
@@ -483,7 +483,7 @@
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(403, 13);
+            this.labelControl2.Location = new System.Drawing.Point(487, 13);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(10);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(29, 26);
@@ -495,7 +495,7 @@
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(775, 71);
+            this.labelControl1.Location = new System.Drawing.Point(859, 71);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(10);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(225, 26);
@@ -505,7 +505,7 @@
             // textEditCustomerName
             // 
             this.textEditCustomerName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textEditCustomerName.Location = new System.Drawing.Point(453, 68);
+            this.textEditCustomerName.Location = new System.Drawing.Point(537, 68);
             this.textEditCustomerName.Margin = new System.Windows.Forms.Padding(10);
             this.textEditCustomerName.Name = "textEditCustomerName";
             this.textEditCustomerName.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold);
@@ -531,7 +531,7 @@
             // 
             this.dateEditFrom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateEditFrom.EditValue = null;
-            this.dateEditFrom.Location = new System.Drawing.Point(453, 10);
+            this.dateEditFrom.Location = new System.Drawing.Point(537, 10);
             this.dateEditFrom.Margin = new System.Windows.Forms.Padding(10);
             this.dateEditFrom.Name = "dateEditFrom";
             this.dateEditFrom.Properties.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -549,7 +549,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1062, 682);
+            this.ClientSize = new System.Drawing.Size(1231, 682);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
@@ -569,8 +569,8 @@
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageBoxAbout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBoxSettings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBoxAbout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
