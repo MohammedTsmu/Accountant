@@ -42,6 +42,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.lblTotalAmount = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.svgImageBoxAbout = new DevExpress.XtraEditors.SvgImageBox();
             this.svgImageBoxSettings = new DevExpress.XtraEditors.SvgImageBox();
             this.btnPrintReport = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -59,6 +60,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBoxAbout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBoxSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -390,6 +392,7 @@
             // 
             // panelControl3
             // 
+            this.panelControl3.Controls.Add(this.svgImageBoxAbout);
             this.panelControl3.Controls.Add(this.svgImageBoxSettings);
             this.panelControl3.Controls.Add(this.btnAddTransaction);
             this.panelControl3.Controls.Add(this.btnDeleteTransaction);
@@ -401,6 +404,20 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(706, 76);
             this.panelControl3.TabIndex = 5;
+            // 
+            // svgImageBoxAbout
+            // 
+            this.svgImageBoxAbout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.svgImageBoxAbout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.svgImageBoxAbout.Location = new System.Drawing.Point(323, 8);
+            this.svgImageBoxAbout.Margin = new System.Windows.Forms.Padding(10);
+            this.svgImageBoxAbout.Name = "svgImageBoxAbout";
+            this.svgImageBoxAbout.Size = new System.Drawing.Size(60, 60);
+            this.svgImageBoxAbout.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBoxAbout.SvgImage")));
+            this.svgImageBoxAbout.TabIndex = 7;
+            this.svgImageBoxAbout.Text = "svgImageBox1";
+            this.svgImageBoxAbout.ToolTip = "حول البرنامج";
+            this.svgImageBoxAbout.Click += new System.EventHandler(this.svgImageBoxAbout_Click);
             // 
             // svgImageBoxSettings
             // 
@@ -552,6 +569,7 @@
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBoxAbout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBoxSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
@@ -587,6 +605,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.SvgImageBox svgImageBoxSettings;
+        private DevExpress.XtraEditors.SvgImageBox svgImageBoxAbout;
     }
 }
 
