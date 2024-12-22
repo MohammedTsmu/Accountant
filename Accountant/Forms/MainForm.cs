@@ -254,11 +254,52 @@ namespace Accountant
         //    }
         //}
 
+        //private void btnPrintReport_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        // Get the filtered data from GridControl
+        //        var filteredTransactions = gridControl1.DataSource as List<Transaction>;
+
+        //        if (filteredTransactions == null || !filteredTransactions.Any())
+        //        {
+        //            MessageBox.Show("لا توجد بيانات لإنشاء التقرير.", "تقرير خطأ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //            return;
+        //        }
+
+        //        // Create and configure the report
+        //        var report = new Reports.TransactionReport();
+        //        report.DataSource = filteredTransactions;
+        //        report.DataMember = ""; // Ensure no specific data member is restricting the data
+
+        //        //var fromDate = dateEditFrom.DateTime.Date;
+        //        //var toDate = dateEditTo.DateTime.Date.AddDays(1).AddTicks(-1);
+        //        report.Parameters["pFromDate"].Value = dateEditFrom.DateOnly;
+        //        report.Parameters["pToDate"].Value = dateEditTo.DateOnly;
+
+        //        // Pass parameters if needed
+        //        if (report.Parameters["ReportTotal"] != null)
+        //        {
+        //            report.Parameters["ReportTotal"].Value = filteredTransactions.Sum(t => t.AmountReceived);
+        //            report.Parameters["ReportTotal"].Visible = false; // Avoid asking for the parameter value
+        //            report.Parameters["pFromDate"].Visible = false;
+        //            report.Parameters["pToDate"].Visible = false;
+        //        }
+
+        //        // Preview the report
+        //        var printTool = new DevExpress.XtraReports.UI.ReportPrintTool(report);
+        //        printTool.ShowPreview();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"حدث خطأ أثناء إنشاء التقرير: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
         private void btnPrintReport_Click(object sender, EventArgs e)
         {
             try
             {
-                // Get the filtered data from GridControl
                 var filteredTransactions = gridControl1.DataSource as List<Transaction>;
 
                 if (filteredTransactions == null || !filteredTransactions.Any())
@@ -267,32 +308,29 @@ namespace Accountant
                     return;
                 }
 
-                // Create and configure the report
-                var report = new Reports.TransactionReport();
-                report.DataSource = filteredTransactions;
-                report.DataMember = ""; // Ensure no specific data member is restricting the data
+                var report = new Reports.TransactionReport
+                {
+                    DataSource = filteredTransactions,
+                    DataMember = ""
+                };
 
-                //var fromDate = dateEditFrom.DateTime.Date;
-                //var toDate = dateEditTo.DateTime.Date.AddDays(1).AddTicks(-1);
+                // Set report parameters
+                //report.Parameters["pFromDate"].Value = dateEditFrom.DateTime.Date;
+                //report.Parameters["pToDate"].Value = dateEditTo.DateTime.Date;
                 report.Parameters["pFromDate"].Value = dateEditFrom.DateOnly;
                 report.Parameters["pToDate"].Value = dateEditTo.DateOnly;
+                report.Parameters["ReportTotal"].Value = filteredTransactions.Sum(t => t.AmountReceived);
 
-                // Pass parameters if needed
-                if (report.Parameters["ReportTotal"] != null)
-                {
-                    report.Parameters["ReportTotal"].Value = filteredTransactions.Sum(t => t.AmountReceived);
-                    report.Parameters["ReportTotal"].Visible = false; // Avoid asking for the parameter value
-                    report.Parameters["pFromDate"].Visible = false;
-                    report.Parameters["pToDate"].Visible = false;
-                }
+                report.Parameters["pFromDate"].Visible = false;
+                report.Parameters["pToDate"].Visible = false;
+                report.Parameters["ReportTotal"].Visible = false;
 
-                // Preview the report
                 var printTool = new DevExpress.XtraReports.UI.ReportPrintTool(report);
                 printTool.ShowPreview();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"حدث خطأ أثناء إنشاء التقرير: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"حدث خطأ أثناء إنشاء التقرير: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -301,7 +339,8 @@ namespace Accountant
 
 
 
-        private void BackupDatabase(string backupPath)
+
+        public void BackupDatabase(string backupPath)
         {
             try
             {
@@ -323,7 +362,7 @@ namespace Accountant
             }
         }
 
-        private void RestoreDatabase(string backupPath)
+        public void RestoreDatabase(string backupPath)
         {
             try
             {
@@ -352,5 +391,65 @@ namespace Accountant
                 BackupDatabase("C:\\Backup\\AccountantDB.bak");
             }
         }
+
+        private void svgImageBoxSettings_Click(object sender, EventArgs e)
+        {
+            var settingsForm = new SettingsForm(this);
+            settingsForm.ShowDialog();
+
+        }
+
+        //public void ReloadData()
+        //{
+        //    try
+        //    {
+        //        using (var db = new AccountantDBEntities())
+        //        {
+        //            // Reload transactions into the GridControl
+        //            gridControl1.DataSource = null;
+        //            gridControl1.DataSource = db.Transactions.ToList();
+
+        //            // Reset totals or filters if needed
+        //            lblTotalAmount.Text = "اجمالي المبلغ الوارد: 0.00";
+        //            SetDatesTo30Days(); // Resets date filters to last 30 days
+        //        }
+
+        //        MessageBox.Show("تم تحديث البيانات بنجاح.", "تحديث البيانات", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"فشل تحديث البيانات: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
+        public void ReloadData()
+        {
+            try
+            {
+                using (var db = new AccountantDBEntities())
+                {
+                    // Reload transactions into the GridControl
+                    var transactions = db.Transactions.ToList();
+                    gridControl1.DataSource = null;
+                    gridControl1.DataSource = transactions;
+
+                    // Calculate the total amount
+                    var totalAmount = transactions.Sum(t => t.AmountReceived);
+                    lblTotalAmount.Text = $"اجمالي المبلغ الوارد: {totalAmount:N2}";
+
+                    // Optionally reset filters
+                    SetDatesTo30Days(); // Reset date filters to the last 30 days
+                }
+
+                MessageBox.Show("تم تحديث البيانات بنجاح.", "تحديث البيانات", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"فشل تحديث البيانات: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
     }
 }
