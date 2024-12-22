@@ -82,7 +82,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditTo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateEditTo.Size = new System.Drawing.Size(387, 32);
-            this.dateEditTo.TabIndex = 0;
+            this.dateEditTo.TabIndex = 999;
+            this.dateEditTo.TabStop = false;
             // 
             // gridControl1
             // 
@@ -302,7 +303,8 @@
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnFilter.Size = new System.Drawing.Size(143, 60);
-            this.btnFilter.TabIndex = 4;
+            this.btnFilter.TabIndex = 999;
+            this.btnFilter.TabStop = false;
             this.btnFilter.Text = "تصفية";
             this.btnFilter.ToolTip = "تصفية المعاملات حسب المعايير";
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
@@ -493,7 +495,8 @@
             this.textEditCustomerName.Properties.Appearance.Options.UseFont = true;
             this.textEditCustomerName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textEditCustomerName.Size = new System.Drawing.Size(302, 32);
-            this.textEditCustomerName.TabIndex = 7;
+            this.textEditCustomerName.TabIndex = 999;
+            this.textEditCustomerName.TabStop = false;
             // 
             // simpleButton8
             // 
@@ -522,7 +525,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditFrom.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateEditFrom.Size = new System.Drawing.Size(387, 32);
-            this.dateEditFrom.TabIndex = 0;
+            this.dateEditFrom.TabIndex = 999;
+            this.dateEditFrom.TabStop = false;
             // 
             // MainForm
             // 

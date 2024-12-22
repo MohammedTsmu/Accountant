@@ -57,7 +57,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditTransaction.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateEditTransaction.Size = new System.Drawing.Size(406, 32);
-            this.dateEditTransaction.TabIndex = 0;
+            this.dateEditTransaction.TabIndex = 1;
             // 
             // textEditCustomerName
             // 
@@ -68,7 +68,7 @@
             this.textEditCustomerName.Name = "textEditCustomerName";
             this.textEditCustomerName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textEditCustomerName.Size = new System.Drawing.Size(406, 33);
-            this.textEditCustomerName.TabIndex = 1;
+            this.textEditCustomerName.TabIndex = 2;
             // 
             // spinEditAmount
             // 
@@ -87,7 +87,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spinEditAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.spinEditAmount.Size = new System.Drawing.Size(406, 32);
-            this.spinEditAmount.TabIndex = 2;
+            this.spinEditAmount.TabIndex = 3;
             // 
             // btnCancel
             // 
@@ -100,7 +100,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnCancel.Size = new System.Drawing.Size(125, 56);
-            this.btnCancel.TabIndex = 3;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "الغاء";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
             // 
@@ -115,7 +115,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSave.Size = new System.Drawing.Size(125, 56);
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 

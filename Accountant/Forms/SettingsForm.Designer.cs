@@ -46,12 +46,12 @@
             this.btnBackup.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackup.Appearance.Options.UseFont = true;
             this.btnBackup.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBackup.ImageOptions.SvgImage")));
-            this.btnBackup.Location = new System.Drawing.Point(240, 249);
+            this.btnBackup.Location = new System.Drawing.Point(166, 235);
             this.btnBackup.Margin = new System.Windows.Forms.Padding(5);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnBackup.Size = new System.Drawing.Size(282, 78);
-            this.btnBackup.TabIndex = 5;
+            this.btnBackup.TabIndex = 4;
             this.btnBackup.Text = "انشاء نسخة احتياطية";
             this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
             // 
@@ -61,12 +61,12 @@
             this.btnRestore.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestore.Appearance.Options.UseFont = true;
             this.btnRestore.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRestore.ImageOptions.SvgImage")));
-            this.btnRestore.Location = new System.Drawing.Point(240, 338);
+            this.btnRestore.Location = new System.Drawing.Point(166, 324);
             this.btnRestore.Margin = new System.Windows.Forms.Padding(6);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnRestore.Size = new System.Drawing.Size(282, 78);
-            this.btnRestore.TabIndex = 6;
+            this.btnRestore.TabIndex = 5;
             this.btnRestore.Text = "استعادة النسخة الاحتياطية";
             this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
             // 
@@ -74,11 +74,11 @@
             // 
             this.chkAutoBackup.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chkAutoBackup.AutoSize = true;
-            this.chkAutoBackup.Location = new System.Drawing.Point(310, 425);
+            this.chkAutoBackup.Location = new System.Drawing.Point(236, 411);
             this.chkAutoBackup.Name = "chkAutoBackup";
             this.chkAutoBackup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chkAutoBackup.Size = new System.Drawing.Size(212, 30);
-            this.chkAutoBackup.TabIndex = 7;
+            this.chkAutoBackup.TabIndex = 6;
             this.chkAutoBackup.Text = "اخذ نسخة عند الاغلاق";
             this.chkAutoBackup.UseVisualStyleBackColor = true;
             this.chkAutoBackup.CheckedChanged += new System.EventHandler(this.chkAutoBackup_CheckedChanged);
@@ -89,7 +89,7 @@
             this.txtServerName.Location = new System.Drawing.Point(17, 57);
             this.txtServerName.Name = "txtServerName";
             this.txtServerName.Size = new System.Drawing.Size(303, 33);
-            this.txtServerName.TabIndex = 8;
+            this.txtServerName.TabIndex = 1;
             // 
             // txtBackupPath
             // 
@@ -97,7 +97,7 @@
             this.txtBackupPath.Location = new System.Drawing.Point(17, 96);
             this.txtBackupPath.Name = "txtBackupPath";
             this.txtBackupPath.Size = new System.Drawing.Size(303, 33);
-            this.txtBackupPath.TabIndex = 8;
+            this.txtBackupPath.TabIndex = 2;
             // 
             // btnSave
             // 
@@ -105,12 +105,12 @@
             this.btnSave.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
-            this.btnSave.Location = new System.Drawing.Point(240, 600);
+            this.btnSave.Location = new System.Drawing.Point(166, 586);
             this.btnSave.Margin = new System.Windows.Forms.Padding(8);
             this.btnSave.Name = "btnSave";
             this.btnSave.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSave.Size = new System.Drawing.Size(282, 78);
-            this.btnSave.TabIndex = 6;
+            this.btnSave.TabIndex = 7;
             this.btnSave.Text = "حفظ الاعدادات";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -120,12 +120,12 @@
             this.btnBrowseBackupPath.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrowseBackupPath.Appearance.Options.UseFont = true;
             this.btnBrowseBackupPath.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBrowseBackupPath.ImageOptions.SvgImage")));
-            this.btnBrowseBackupPath.Location = new System.Drawing.Point(240, 156);
+            this.btnBrowseBackupPath.Location = new System.Drawing.Point(166, 142);
             this.btnBrowseBackupPath.Margin = new System.Windows.Forms.Padding(10);
             this.btnBrowseBackupPath.Name = "btnBrowseBackupPath";
             this.btnBrowseBackupPath.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnBrowseBackupPath.Size = new System.Drawing.Size(282, 78);
-            this.btnBrowseBackupPath.TabIndex = 6;
+            this.btnBrowseBackupPath.TabIndex = 3;
             this.btnBrowseBackupPath.Text = "تغيير مسار الحفظ";
             this.btnBrowseBackupPath.Click += new System.EventHandler(this.btnBrowseBackupPath_Click);
             // 

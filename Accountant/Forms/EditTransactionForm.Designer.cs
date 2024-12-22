@@ -85,7 +85,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSave.Size = new System.Drawing.Size(125, 56);
-            this.btnSave.TabIndex = 8;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -99,7 +99,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnCancel.Size = new System.Drawing.Size(125, 56);
-            this.btnCancel.TabIndex = 9;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "الغاء";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -119,7 +119,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spinEditAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.spinEditAmount.Size = new System.Drawing.Size(406, 32);
-            this.spinEditAmount.TabIndex = 7;
+            this.spinEditAmount.TabIndex = 3;
             // 
             // textEditCustomerName
             // 
@@ -129,7 +129,7 @@
             this.textEditCustomerName.Name = "textEditCustomerName";
             this.textEditCustomerName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textEditCustomerName.Size = new System.Drawing.Size(406, 33);
-            this.textEditCustomerName.TabIndex = 6;
+            this.textEditCustomerName.TabIndex = 2;
             // 
             // dateEditTransaction
             // 
@@ -145,7 +145,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEditTransaction.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateEditTransaction.Size = new System.Drawing.Size(406, 32);
-            this.dateEditTransaction.TabIndex = 5;
+            this.dateEditTransaction.TabIndex = 1;
             // 
             // EditTransactionForm
             // 
