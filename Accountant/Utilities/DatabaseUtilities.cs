@@ -24,11 +24,34 @@ namespace Accountant.Utilities
 
                 using (var connection = new SqlConnection($"Data Source={serverName};Integrated Security=True"))
                 {
-                    var query = $"BACKUP DATABASE AccountantDB TO DISK = '{backupPath}'";
-                    var command = new SqlCommand(query, connection);
-
                     connection.Open();
-                    command.ExecuteNonQuery();
+
+                    // Terminate all active connections to the database
+                    var terminateConnectionsQuery = @"
+                USE master;
+                ALTER DATABASE AccountantDB SET SINGLE_USER WITH ROLLBACK IMMEDIATE";
+
+                    using (var terminateCommand = new SqlCommand(terminateConnectionsQuery, connection))
+                    {
+                        terminateCommand.ExecuteNonQuery();
+                    }
+
+                    // Perform the backup
+                    string query = $"BACKUP DATABASE AccountantDB TO DISK = '{backupPath}'";
+                    using (var command = new SqlCommand(query, connection))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+
+                    // Set the database back to multi-user mode
+                    var multiUserQuery = @"
+                ALTER DATABASE AccountantDB SET MULTI_USER";
+
+                    using (var multiUserCommand = new SqlCommand(multiUserQuery, connection))
+                    {
+                        multiUserCommand.ExecuteNonQuery();
+                    }
+
                     connection.Close();
                 }
 
@@ -39,6 +62,7 @@ namespace Accountant.Utilities
                 MessageBox.Show($"فشل النسخ الاحتياطي: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         public static void RestoreDatabase(string restoreFile, MainForm mainForm)
@@ -57,30 +81,45 @@ namespace Accountant.Utilities
                 {
                     connection.Open();
 
-                    // Terminate all active connections to the database
-                    var terminateConnectionsQuery = @"
-                ALTER DATABASE AccountantDB 
-                SET SINGLE_USER WITH ROLLBACK IMMEDIATE";
+                    // Identify and kill all active connections to the database
+                    string killConnectionsQuery = @"
+                DECLARE @kill varchar(8000) = '';
+                SELECT @kill = @kill + 'KILL ' + CONVERT(varchar(5), session_id) + ';'
+                FROM sys.dm_exec_sessions
+                WHERE database_id = DB_ID('AccountantDB');
+                EXEC(@kill)";
 
-                    using (var terminateCommand = new SqlCommand(terminateConnectionsQuery, connection))
+                    using (var killCommand = new SqlCommand(killConnectionsQuery, connection))
                     {
-                        terminateCommand.ExecuteNonQuery();
+                        killCommand.ExecuteNonQuery();
                     }
 
-                    // Restore the database
-                    var restoreQuery = $"RESTORE DATABASE AccountantDB FROM DISK = '{restoreFile}'";
+                    // Set the database to SINGLE_USER mode
+                    var setSingleUserQuery = @"
+                USE master;
+                ALTER DATABASE AccountantDB SET SINGLE_USER WITH ROLLBACK IMMEDIATE";
+
+                    using (var singleUserCommand = new SqlCommand(setSingleUserQuery, connection))
+                    {
+                        singleUserCommand.ExecuteNonQuery();
+                    }
+
+                    // Restore the database with REPLACE
+                    var restoreQuery = $@"
+                RESTORE DATABASE AccountantDB 
+                FROM DISK = '{restoreFile}' 
+                WITH REPLACE";
 
                     using (var restoreCommand = new SqlCommand(restoreQuery, connection))
                     {
                         restoreCommand.ExecuteNonQuery();
                     }
 
-                    // Set the database back to multi-user mode
-                    var multiUserQuery = @"
-                ALTER DATABASE AccountantDB 
-                SET MULTI_USER";
+                    // Set the database back to MULTI_USER mode
+                    var setMultiUserQuery = @"
+                ALTER DATABASE AccountantDB SET MULTI_USER";
 
-                    using (var multiUserCommand = new SqlCommand(multiUserQuery, connection))
+                    using (var multiUserCommand = new SqlCommand(setMultiUserQuery, connection))
                     {
                         multiUserCommand.ExecuteNonQuery();
                     }
@@ -98,6 +137,9 @@ namespace Accountant.Utilities
                 MessageBox.Show($"فشل الاستعادة: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+
 
     }
 
