@@ -22,20 +22,6 @@ namespace Accountant.Forms
             mainForm = parentForm;
         }
 
-        //public SettingsForm()
-        //{
-        //    InitializeComponent();
-        //}
-
-        //private void btnBackup_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void btnRestore_Click(object sender, EventArgs e)
-        //{
-
-        //}
         private void SettingsForm_Load(object sender, EventArgs e)
         {
             chkAutoBackup.Checked = Properties.Settings.Default.AutoBackup;
@@ -43,34 +29,6 @@ namespace Accountant.Forms
             txtBackupPath.Text = Properties.Settings.Default.BackupPath;
         }
 
-
-        //private void btnBackup_Click(object sender, EventArgs e)
-        //{
-        //    using (var dialog = new SaveFileDialog())
-        //    {
-        //        dialog.Filter = "Backup Files (*.bak)|*.bak";
-        //        dialog.Title = "Select Backup File";
-
-        //        if (dialog.ShowDialog() == DialogResult.OK)
-        //        {
-        //            mainForm.BackupDatabase(dialog.FileName);
-        //        }
-        //    }
-        //}
-
-        //private void btnRestore_Click(object sender, EventArgs e)
-        //{
-        //    using (var dialog = new OpenFileDialog())
-        //    {
-        //        dialog.Filter = "Backup Files (*.bak)|*.bak";
-        //        dialog.Title = "Select Backup File";
-
-        //        if (dialog.ShowDialog() == DialogResult.OK)
-        //        {
-        //            mainForm.RestoreDatabase(dialog.FileName);
-        //        }
-        //    }
-        //}
 
         private void btnBackup_Click(object sender, EventArgs e)
         {
@@ -100,9 +58,6 @@ namespace Accountant.Forms
             }
         }
 
-
-
-
         private void chkAutoBackup_CheckedChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.AutoBackup = chkAutoBackup.Checked;
@@ -113,6 +68,7 @@ namespace Accountant.Forms
         {
             Properties.Settings.Default.ServerName = txtServerName.Text.Trim();
             Properties.Settings.Default.BackupPath = txtBackupPath.Text.Trim();
+            Properties.Settings.Default.AutoBackup = chkAutoBackup.Checked;
             Properties.Settings.Default.Save();
 
             MessageBox.Show("تم حفظ الإعدادات بنجاح.", "حفظ الإعدادات", MessageBoxButtons.OK, MessageBoxIcon.Information);

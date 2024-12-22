@@ -10,36 +10,6 @@ namespace Accountant.Utilities
 {
     public static class DatabaseUtilities
     {
-        //public static void BackupDatabase(string backupPath)
-        //{
-        //    try
-        //    {
-        //        string serverName = Properties.Settings.Default.ServerName;
-
-        //        if (string.IsNullOrEmpty(serverName) || string.IsNullOrEmpty(backupPath))
-        //        {
-        //            MessageBox.Show("يرجى ضبط اسم الخادم ومسار النسخ الاحتياطي في الإعدادات أولاً.", "إعدادات مفقودة", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //            return;
-        //        }
-
-        //        using (var connection = new SqlConnection($"Data Source={serverName};Integrated Security=True"))
-        //        {
-        //            var query = $"BACKUP DATABASE AccountantDB TO DISK = '{backupPath}'";
-        //            var command = new SqlCommand(query, connection);
-
-        //            connection.Open();
-        //            command.ExecuteNonQuery();
-        //            connection.Close();
-        //        }
-
-        //        MessageBox.Show($"تم النسخ الاحتياطي لقاعدة البيانات بنجاح إلى {backupPath}.", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"فشل النسخ الاحتياطي: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
-
         public static void BackupDatabase(string backupPath)
         {
             try
@@ -69,11 +39,6 @@ namespace Accountant.Utilities
                 MessageBox.Show($"فشل النسخ الاحتياطي: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
-
-
 
 
         public static void RestoreDatabase(string restoreFile, MainForm mainForm)
@@ -133,12 +98,6 @@ namespace Accountant.Utilities
                 MessageBox.Show($"فشل الاستعادة: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
-
-
-
 
     }
 

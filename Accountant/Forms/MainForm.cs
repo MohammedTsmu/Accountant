@@ -220,8 +220,6 @@ namespace Accountant
                 };
 
                 // Set report parameters
-                //report.Parameters["pFromDate"].Value = dateEditFrom.DateTime.Date;
-                //report.Parameters["pToDate"].Value = dateEditTo.DateTime.Date;
                 report.Parameters["pFromDate"].Value = dateEditFrom.DateOnly;
                 report.Parameters["pToDate"].Value = dateEditTo.DateOnly;
                 report.Parameters["ReportTotal"].Value = filteredTransactions.Sum(t => t.AmountReceived);
@@ -238,22 +236,6 @@ namespace Accountant
                 MessageBox.Show($"حدث خطأ أثناء إنشاء التقرير: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
-
-
-
-
-
-
-        //private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        //{
-        //    if (Properties.Settings.Default.AutoBackup)
-        //    {
-        //        BackupDatabase("C:\\Backup\\AccountantDB.bak");
-        //    }
-        //}
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -315,8 +297,6 @@ namespace Accountant
                 MessageBox.Show($"فشل تحديث البيانات: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
 
     }
 }
