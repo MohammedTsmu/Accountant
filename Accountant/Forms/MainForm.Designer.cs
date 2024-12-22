@@ -96,7 +96,7 @@
             this.gridControl1.Margin = new System.Windows.Forms.Padding(10);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl1.Size = new System.Drawing.Size(1062, 434);
+            this.gridControl1.Size = new System.Drawing.Size(1062, 469);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -315,7 +315,7 @@
             this.btnDeleteTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTransaction.Appearance.Options.UseFont = true;
             this.btnDeleteTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteTransaction.ImageOptions.SvgImage")));
-            this.btnDeleteTransaction.Location = new System.Drawing.Point(175, 25);
+            this.btnDeleteTransaction.Location = new System.Drawing.Point(175, 8);
             this.btnDeleteTransaction.Margin = new System.Windows.Forms.Padding(10);
             this.btnDeleteTransaction.Name = "btnDeleteTransaction";
             this.btnDeleteTransaction.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -331,7 +331,7 @@
             this.btnEditTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditTransaction.Appearance.Options.UseFont = true;
             this.btnEditTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditTransaction.ImageOptions.SvgImage")));
-            this.btnEditTransaction.Location = new System.Drawing.Point(326, 25);
+            this.btnEditTransaction.Location = new System.Drawing.Point(326, 8);
             this.btnEditTransaction.Margin = new System.Windows.Forms.Padding(10);
             this.btnEditTransaction.Name = "btnEditTransaction";
             this.btnEditTransaction.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -347,7 +347,7 @@
             this.btnAddTransaction.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTransaction.Appearance.Options.UseFont = true;
             this.btnAddTransaction.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddTransaction.ImageOptions.SvgImage")));
-            this.btnAddTransaction.Location = new System.Drawing.Point(477, 25);
+            this.btnAddTransaction.Location = new System.Drawing.Point(477, 8);
             this.btnAddTransaction.Margin = new System.Windows.Forms.Padding(10);
             this.btnAddTransaction.Name = "btnAddTransaction";
             this.btnAddTransaction.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -362,10 +362,10 @@
             this.panelControl1.Controls.Add(this.lblTotalAmount);
             this.panelControl1.Controls.Add(this.panelControl3);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 567);
+            this.panelControl1.Location = new System.Drawing.Point(0, 602);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(10);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1062, 115);
+            this.panelControl1.Size = new System.Drawing.Size(1062, 80);
             this.panelControl1.TabIndex = 6;
             // 
             // lblTotalAmount
@@ -384,7 +384,7 @@
             this.lblTotalAmount.Location = new System.Drawing.Point(2, 2);
             this.lblTotalAmount.Margin = new System.Windows.Forms.Padding(10);
             this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(352, 111);
+            this.lblTotalAmount.Size = new System.Drawing.Size(352, 76);
             this.lblTotalAmount.TabIndex = 5;
             this.lblTotalAmount.Text = "اجمالي المبلغ الوارد: 0.00";
             // 
@@ -399,14 +399,14 @@
             this.panelControl3.Location = new System.Drawing.Point(354, 2);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(10);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(706, 111);
+            this.panelControl3.Size = new System.Drawing.Size(706, 76);
             this.panelControl3.TabIndex = 5;
             // 
             // svgImageBoxSettings
             // 
             this.svgImageBoxSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.svgImageBoxSettings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.svgImageBoxSettings.Location = new System.Drawing.Point(623, 25);
+            this.svgImageBoxSettings.Location = new System.Drawing.Point(623, 8);
             this.svgImageBoxSettings.Margin = new System.Windows.Forms.Padding(10);
             this.svgImageBoxSettings.Name = "svgImageBoxSettings";
             this.svgImageBoxSettings.Size = new System.Drawing.Size(60, 60);
@@ -422,7 +422,7 @@
             this.btnPrintReport.Appearance.Font = new System.Drawing.Font("LBC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintReport.Appearance.Options.UseFont = true;
             this.btnPrintReport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrintReport.ImageOptions.SvgImage")));
-            this.btnPrintReport.Location = new System.Drawing.Point(24, 25);
+            this.btnPrintReport.Location = new System.Drawing.Point(24, 8);
             this.btnPrintReport.Margin = new System.Windows.Forms.Padding(10);
             this.btnPrintReport.Name = "btnPrintReport";
             this.btnPrintReport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
